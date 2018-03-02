@@ -1,5 +1,5 @@
 -- CREATE DATABASE milkshake_db;
-USE milkshake_db;
+USE nnxor34mj5tykc7h;
 
 CREATE TABLE milkshakes (
   id INT NOT NULL AUTO_INCREMENT,
