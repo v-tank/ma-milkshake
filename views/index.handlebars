@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col mx-auto p-3">
+      <center><img src="https://cdn3.iconfinder.com/data/icons/bakery-and-sweets/512/Milkshake-512.png" width="200"/></center>
+      <h1 class="text-center p-2">Ma Milkshake</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card text-white bg-warning mb-3">
+        <h4 class="card-header text-center">Waiting to be Gulped</h4>
+        <div class="card-body">
+           {{#each milkshakes}} {{#unless gulped}} {{> milkshake-block gulped=true }} {{/unless}} {{/each}}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card text-white bg-warning mb-3">
+        
+          <h4 class="card-header text-center">Already Gulped</h4>
+        
+        <div class="card-body">
+          {{#each milkshakes}}
+            {{#if gulped}}
+              {{> milkshake-gulped-block gulped=false }}
+            {{/if}}
+          {{/each}}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-md-8 col-lg-6 mx-auto p-4">
+      <div class="form-group text-center">
+        <input type="text" class="form-control" id="name">
+        <button id="add-milkshake">Submit</button>
+        <label for="name">Enter a Milkshake you'd like to gulp and hit 'Submit'!</label>
+      </div>
+    </div>
+  </div>
+</div>
