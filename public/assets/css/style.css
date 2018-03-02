@@ -1,0 +1,53 @@
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: #ecce54;
+}
+
+#shake-name{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 24px;
+  text-align: right;
+}
+
+h4 {
+  font-family: 'PT Sans', sans-serif;
+}
+
+button {
+  border-radius: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+  color: #fff;
+  padding: 5px 0;
+  width: 150px;
+  border: 0;
+  margin: 10px;
+}
+
+button:hover {
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+.gulped-name {
+  font-style: italic;
+  text-align: center;
+}
+
+.bg-warning {
+  background-color: #f2c968 !important;
+}
+
+body, html {
+  opacity: 0.93;
+  background: linear-gradient( rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 1)),
+  url("https://wallpapercave.com/wp/Pxtyzn2.gif");
+  height: 100%;
+}
+
+label {
+  color: #fff;
+}
+
+input {
+  text-align: center;
+}
