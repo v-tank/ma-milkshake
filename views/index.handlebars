@@ -1,4 +1,6 @@
+{{!-- Main container to hold everything on the page --}}
 <div class="container">
+  {{!-- Row with the page header and image  --}}
   <div class="row">
     <div class="col mx-auto p-3">
       <center><img src="https://cdn3.iconfinder.com/data/icons/bakery-and-sweets/512/Milkshake-512.png" width="200"/></center>
@@ -6,12 +8,18 @@
     </div>
   </div>
 
+  {{!-- Row that contains cards for the waiting list and the ones that have been gulped already --}}
   <div class="row">
     <div class="col-md-6">
       <div class="card text-white bg-warning mb-3">
         <h4 class="card-header text-center">Waiting to be Gulped</h4>
         <div class="card-body">
-           {{#each milkshakes}} {{#unless gulped}} {{> milkshake-block gulped=true }} {{/unless}} {{/each}}
+          {{!-- Loops through the list of milkshakes and filters the ones that haven't been gulped --}}
+          {{#each milkshakes}} 
+            {{#unless gulped}} 
+              {{> milkshake-block gulped=true }} 
+            {{/unless}} 
+          {{/each}}
         </div>
       </div>
     </div>
@@ -22,6 +30,7 @@
           <h4 class="card-header text-center">Already Gulped</h4>
         
         <div class="card-body">
+           {{!-- Loops through the list of milkshakes and filters the ones that have been gulped --}}
           {{#each milkshakes}}
             {{#if gulped}}
               {{> milkshake-gulped-block gulped=false }}
@@ -33,6 +42,7 @@
     </div>
   </div>
 
+  {{!-- Row with the text field to add milkshake to the list --}}
   <div class="row">
     <div class="col-12 col-md-8 col-lg-6 mx-auto p-4">
       <div class="form-group text-center">
