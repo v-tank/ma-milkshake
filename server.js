@@ -1,15 +1,16 @@
+// Require necessary packages
 var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000; // Set up a deployed port or a local one
 
-var app = express();
+var app = express(); // Initialize express
 
-app.use(express.static("public"));
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static("public")); // Imports the static files from the public folder
+app.use(bodyParser.urlencoded({ extended: false })); 
 
-// Set Handlebars.
+// Set up Handlebars
 var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
@@ -19,4 +20,4 @@ var routes = require("./controllers/milkshake_controller.js");
 
 app.use("/", routes);
 
-app.listen(PORT);
+app.listen(PORT); // Listen for requests on the port
