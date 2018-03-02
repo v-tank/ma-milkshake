@@ -23,19 +23,25 @@ $(function() {
   $("#add-milkshake").on("click", function(event) {
     event.preventDefault();
     
-    // Grabs the user-inputted name and creates an object to send to the POST route
-    var newMilkshake = {
-      name: $("#name").val().trim()
-    };
-    console.log(newMilkshake);
+    var name = $("#name").val().trim();
 
-    // AJAX call to add item to the database
-    $.ajax("/milkshakes", {
-      type: "POST",
-      data: newMilkshake
-    }).then(function(){
-      console.log("Added to the database");
-      location.reload(); // Reloads page to show the new shake on the list
-    })
-  })
+    if ((name === "") || (name === null)) {
+      console.log("Please enter a valid milkshake name.");
+    } else {
+      // Grabs the user-inputted name and creates an object to send to the POST route
+      var newMilkshake = {
+        name: name
+      };
+      console.log(newMilkshake);
+
+      // AJAX call to add item to the database
+      $.ajax("/milkshakes", {
+        type: "POST",
+        data: newMilkshake
+      }).then(function(){
+        console.log("Added to the database");
+        location.reload(); // Reloads page to show the new shake on the list
+      });
+    }
+  });
 });
