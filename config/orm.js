@@ -18,17 +18,22 @@ function questionMarks(length) {
 
 function extractKeyValue(obj) {
   var array = [];
+  // console.log(obj);
+
   for (var key in obj) {
     var value = obj[key];
- 
+    // console.log(value);
+
     if (Object.hasOwnProperty.call(obj, key)) {
       
-      value="'" + value + "'";
+      if (typeof value === "string" && value.indexOf(" ") >= 0) {
+        value = "'" + value + "'";
+      }
       
       array.push(key + "=" + value);
     }
   }
-
+  console.log(array.toString());
   return array.toString();
 }
 
@@ -51,11 +56,11 @@ var orm = {
     connection.query(query, vals, function(err, results) {
       if (err) throw err;
 
-      cb(result);
+      cb(results);
     });
   },
   updateOne: function(table, colVal, whereCondition, cb) {
-    var query = "UPDATE " + table + " SET " + extractKeyValue(obj) + "WHERE " + whereCondition;
+    var query = "UPDATE " + table + " SET " + extractKeyValue(colVal) + " WHERE " + whereCondition;
 
     console.log(query);
 
