@@ -1,8 +1,18 @@
+/* Changes the opacity and the background of the page */
+body, html {
+  opacity: 0.93;
+  background: linear-gradient( rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 1)),
+  url("https://wallpapercave.com/wp/Pxtyzn2.gif");
+  height: 100%;
+}
+
+/* Sets the font and the color of h1 headings */
 h1 {
   font-family: 'Pacifico', cursive;
   color: #ecce54;
 }
 
+/* Changes the font, size, and alignment of the shake names */
 #shake-name{
   font-family: 'PT Sans', sans-serif;
   font-size: 24px;
@@ -13,6 +23,7 @@ h4 {
   font-family: 'PT Sans', sans-serif;
 }
 
+/* Changes look of the buttons with a radius, gradient, and custom size */
 button {
   border-radius: 25px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -24,30 +35,28 @@ button {
   margin: 10px;
 }
 
+/* Button-hover properties */
 button:hover {
   background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 
+/* Formats the shakes that have been gulped */
 .gulped-name {
   font-style: italic;
   text-align: center;
 }
 
+/* Sets the background color of the cards */
 .bg-warning {
   background-color: #f2c968 !important;
 }
 
-body, html {
-  opacity: 0.93;
-  background: linear-gradient( rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 1)),
-  url("https://wallpapercave.com/wp/Pxtyzn2.gif");
-  height: 100%;
-}
-
+/* Changes the font color of the labels to make them more legible */
 label {
   color: #fff;
 }
 
+/* Centers text in an input box */
 input {
   text-align: center;
 }
