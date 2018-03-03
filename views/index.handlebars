@@ -12,7 +12,7 @@
   <div class="row">
     <div class="col-md-6">
       <div class="card text-white bg-warning mb-3">
-        <h4 class="card-header text-center">Waiting to be Gulped</h4>
+        <h4 class="card-header text-center">On Order</h4>
         <div class="card-body">
           {{!-- Loops through the list of milkshakes and filters the ones that haven't been gulped --}}
           {{#each milkshakes}} 
@@ -27,7 +27,7 @@
     <div class="col-md-6">
       <div class="card text-white bg-warning mb-3">
         
-          <h4 class="card-header text-center">Already Gulped</h4>
+          <h4 class="card-header text-center">Completed Orders</h4>
         
         <div class="card-body">
            {{!-- Loops through the list of milkshakes and filters the ones that have been gulped --}}
@@ -48,7 +48,7 @@
       <div class="form-group text-center">
         <input type="text" class="form-control" id="name">
         <button id="add-milkshake">Submit</button>
-        <label for="name">Enter a Milkshake you'd like to gulp and hit 'Submit'!</label>
+        <label for="name">Enter a Milkshake you'd like to order and hit 'Submit Order'!</label>
       </div>
     </div>
   </div>
