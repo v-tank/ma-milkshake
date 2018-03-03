@@ -27,6 +27,7 @@ $(function() {
 
     if ((name === "") || (name === null)) {
       console.log("Please enter a valid milkshake name.");
+      $("#errorModal").modal('toggle');
     } else {
       // Grabs the user-inputted name and creates an object to send to the POST route
       var newMilkshake = {
