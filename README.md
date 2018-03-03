@@ -80,3 +80,4 @@ There are two ways to run this application. The user can either run the applicat
 
 3. If the user chooses to `Gulp` a milkshake, the application will move the shake from the *Completed Orders*.
 
+![](https://media.giphy.com/media/5aY6fmJwCkkbfywvIP/giphy.gif)
