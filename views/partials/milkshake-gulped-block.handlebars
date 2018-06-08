@@ -1,7 +1,10 @@
 {{!-- Layout for the milkshakes that have been gulped --}}
 <div class="row align-items-center">
   <div class="col" id="shake-name">
-    <p class="gulped-name">{{milkshake_name}}</p>
-    <hr>
+    <span class="gulped-name">{{milkshake_name}}</span>
+  </div>
+  <div class="col" id="delete-btn">
+    <a class="btn btn-danger delete-shake" data-id="{{this.id}}">Delete</a>
   </div>
 </div>
+<hr>

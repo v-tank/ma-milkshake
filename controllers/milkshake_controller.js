@@ -35,6 +35,18 @@ router.put("/milkshakes/:id", function(req, res) {
       return res.status(200).end(); // Send OK once update is completed 
     }
   })
+});
+
+router.delete("/milkshakes/:id", function(req, res) {
+  var whereCondition = "id = " + req.params.id;
+
+  milkshake.delete(whereCondition, function(result) {
+    if (res.changedRows === 0) {
+      return res.status(400).end();
+    } else {
+      return res.status(200).end();
+    }
+  })
 })
 
 module.exports = router; // Export the router

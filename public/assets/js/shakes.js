@@ -45,4 +45,17 @@ $(function() {
       });
     }
   });
+
+  $(".delete-shake").on("click", function(event) {
+    event.preventDefault();
+    var id = $(this).attr("data-id"); // grabs the id of the button clicked
+
+    // AJAX call to update the state
+    $.ajax("/milkshakes/" + id, {
+      type: "DELETE"
+    }).then(function () {
+      console.log("Deleted the shake!");
+      location.reload(); // Reloads page to show the updated status of the shake
+    });
+  })
 });

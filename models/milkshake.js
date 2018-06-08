@@ -17,6 +17,11 @@ var milkshake = {
     orm.updateOne("milkshakes", colVal, whereCondition, function(res) { // Calls the ORM method to update item in the 'milkshakes' table
       cb(res);
     });
+  },
+  delete: function (whereCondition, cb) {
+    orm.delete("milkshakes", whereCondition, function(res) {
+      cb(res);
+    });
   }
 };
 

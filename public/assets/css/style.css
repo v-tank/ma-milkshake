@@ -19,6 +19,10 @@ h1 {
   text-align: right;
 }
 
+#delete-btn{
+  text-align: center;
+}
+
 h4 {
   font-family: 'PT Sans', sans-serif;
 }

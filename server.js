@@ -19,5 +19,5 @@ app.set("view engine", "handlebars");
 var routes = require("./controllers/milkshake_controller.js");
 
 app.use("/", routes);
-
+console.log(`Connected on PORT ${PORT}!`);
 app.listen(PORT); // Listen for requests on the port
